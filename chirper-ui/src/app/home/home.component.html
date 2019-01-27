@@ -1,0 +1,15 @@
+<form>
+  <div class="form-group">
+    <label for="chirp">Chirp here!</label>
+    <input type="text" class="form-control" id="chirp" #chirpText name="temp" [(ngModel)]="temp" placeholder="Chirp!!">
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="addChirp(chirpText.value)">Submit</button>
+</form>
+
+<div *ngFor="let chirp of chirps">
+  <p>{{chirp}}</p>
+</div>
+
+<p>
+  {{dataBlc}}
+</p>
